@@ -267,9 +267,6 @@ nav {display:none;}
   box-shadow:var(--bs);
   z-index: 2;
   align-self: start;
-
-
-
 }
 
 
@@ -303,7 +300,7 @@ nav {display:none;}
 
 /*Projects section*/
 
-.my_work {
+.my-work {
   background-color: var(--clr-dark);
   color:var(--clr-light);
   text-align: center;
@@ -313,21 +310,27 @@ nav {display:none;}
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .portfolio_title {
-  margin: 2;
+  padding:1em;
   }
 
 .portfolio_item {
   overflow:hidden;
+
   }
 
 .portfolio_img {
   transition: 
     transform 750ms cubic-bezier(.5, 0, .5, 1);
     opacity:  250ms linear;
+}
+
+.portfolio_img:focus {
+  position: relative;
+  z-index:2 ;
 }
 
 .portfolio_img:hover,
@@ -338,7 +341,8 @@ nav {display:none;}
 
 }
 
-/*Project Info section */
+/*Project Items Info section */
+
 .info_list {
   list-style: none;
   display: flex;
@@ -353,7 +357,6 @@ nav {display:none;}
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   padding: .5em;
-
 
 
 }
