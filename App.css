@@ -70,7 +70,7 @@ reg { font-weight: var(--fw-reg) }
 
 .btn {
   display: inline-block;
-  padding: .5em 2.5em;
+  padding: .5em 1.5em;
   background: var(--clr-accent);
   color: var(--clr-dark);
   cursor:pointer;
@@ -79,6 +79,7 @@ reg { font-weight: var(--fw-reg) }
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -99,6 +100,11 @@ h2 {font-size: var(--fs-h2)}
 h3 {font-size: var(--fs-h3)}
 
 regular { font-weight: var(--fw-reg) }
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
 
 
 .section__title {
@@ -141,7 +147,7 @@ nav {display:none;}
 }
 
 
-@media(min-width: 600px) {
+@media(min-width: 400px) {
   .intro {
     display: grid;
     width: min-content;
@@ -186,11 +192,6 @@ nav {display:none;}
   align-self: start;
 }
 
-:focus {
-  outline: 3px solid var(--clr-accent);
-  outline-offset: 3px;
-}
-
 
 /* Coding section */
 
@@ -215,19 +216,23 @@ nav {display:none;}
   width: 2em;
   height: 1px;
   margin: 0.5 auto 1em;
+  margin-top: .25em;
   background: var(--clr-light);
   opacity: 0.5;
 
  }
 
-
-
+.coding {
+   margin-bottom: 2em;
+  }
 
 @media (min-width: 800px) {
   .coding_paragraphs {
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   .coding + .coding  {
     margin-left: 5em;
@@ -237,24 +242,20 @@ nav {display:none;}
 
 /* AboutMe section */
 
-.aboutme {
+.about-me {
   max-width: 1000px;
   margin: 0 auto;
 
 }
 
-.aboutme_body {
+.about-me__body {
   margin: 0 auto;
-  padding-left:2.25em;
 }
 
-.aboutme_title {
+.about-me_title {
   grid-area: title;
   text-align: left;
-  margin-top: 50px;
-  margin-bottom: 0px;
-  padding:.5em;
-  padding-left:1em;
+
 
 }
 
@@ -262,19 +263,20 @@ nav {display:none;}
   grid-area: img;
   min-width: 320px;
   max-width: 400px;
-  margin: 50;
-  margin-top: 2em;
-  margin-bottom: 2em;
   position: relative;
   box-shadow:var(--bs);
+  z-index: 2;
+  align-self: start;
+
+
 
 }
 
 
-@media(min-width: 500px) {
-  .aboutme {
+@media(min-width: 600px) {
+  .about-me {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 350px;
     grid-template-areas: 
       "title img"
       "subtitle img"
@@ -283,22 +285,20 @@ nav {display:none;}
   }
 }
 
-.section__subtitle__aboutme {
+.section__subtitle__about-me {
   grid-column: 1/-1;
   grid-row: 2;
-  margin:0;
   font-size: var(--fs-h3);
   background: var(--clr-accent);
   font-family: var(--ff-secondary);
   height: 80px;
-  align-self:start;
   text-align: left;
   position: relative;
-  right: -1.5em;
-  width:calc(100% +1.5em);
+  left: -1em;
+  width:calc(100% +2em);
   padding:1em;
   padding-left:2em;
-  padding-right:calc(400px + 4em);
+  padding-right:calc(200px + 4em);
 }
 
 /*Projects section*/
