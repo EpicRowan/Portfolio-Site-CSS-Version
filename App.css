@@ -131,7 +131,7 @@ header {
   display:flex;
   justify-content: space-between;
   height: 100px;
-  background:var(--clr-light);
+  background:var(--clr-dark);
   padding: 1em;
 }
 
@@ -148,7 +148,7 @@ header {
   right: 0;
   z-index: 100;
 
-  transform: translateX(100%);
+  transform: translateX(1000%);
   transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -175,6 +175,25 @@ header {
   color: var(--clr-accent);
 }
 
+.nav__toggle {
+  padding: 1.5em;
+  background: var(--clr-accent);
+  border: 0;
+  box-shadow:var(--bs);  
+  cursor: pointer;
+  position: absolute;
+  right:1em;
+  top:1em;
+  z-index: 1000;
+}
+
+.nav-open {
+  background: red;
+}
+
+
+/* Hamburger */
+
 .hamburger {
   display: block;
   position: relative;
@@ -187,6 +206,7 @@ header {
   width: 2em;
   height: 3px;
   border-radius: 1em;
+  transition: transform 250ms ease-in-out;
 
 }
 
@@ -196,9 +216,11 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-
-
 }
+
+.hamburger::before {top: 6px;}
+.hamburger::after {bottom: 6px;}
+
 
 /* Intro section */
 
