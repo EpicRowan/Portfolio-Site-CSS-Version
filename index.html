@@ -4,6 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Rowan Shepherd Portfolio </title>
+
+		<!--Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
 		<!-- Font Awesome -->
@@ -24,15 +28,20 @@
 			<button class="nav__toggle" aria-label="toggle navigation">
 				<span class="hamburger"></span>
 			</button>
+
 			<nav class="nav">
 				<ul class="nav__list">
+					 		<div class="text-center">
 					<li class="nav__item"><a href="#home" class="nav__link"> Home</a></li>
 					<li class="nav__item"><a href="#coding" class="nav__link"> Coding</a></li>
 					<li class="nav__item"><a href="#about" class="nav__link"> About me</a></li>	
 					<li class="nav__item"><a href="#work" class="nav__link"> Projects</a></li>
-					<li class="nav__item"><a href="#contact" class="nav__link"> Contact</a></li>			
+					<li class="nav__item"><a href="#social" class="nav__link"> Contact</a></li>			
 				</ul>
-			</nav>
+			
+		</div>
+		</nav>
+
 		</header>
 
 		<!--Introduction -->
@@ -79,29 +88,70 @@
 
 		<!-- My Work -->
 		<section class="my-work" id="work">
-			<h2 class="portfolio_title"> My Work </h2>
+			<h2 class="portfolio_title" > My Work </h2>
+
+
+			<!-- Tabs from Bootstrap -->
+	<div class="list-group">
+      	<div class="list-group list-group-horizontal" id="myList" role="tablist">
+      	<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">All</a>
+      	<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Python</a>
+      	<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Javascript</a>
+      	<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">APIs</a>
+  	  	<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-react" role="tab" aria-controls="settings">React</a>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+
+      	<!--Doom mapper -->
+      	<div class="portfolio">
+	<a href="portfolio-item.html" class="portfolio_item" id="doommapper"><img src="img/doom.png" alt="" class="portfolio_img" ></img></a>  
+	     	<!--Keto Tracker -->
+	<a href="portfolio-item.html" class="portfolio_item" id="keto"><img src="img/keto.png" alt="" class="portfolio_img" ></img></a> 
+    </div>
+
+	  </div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"></div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"></div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"></div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel"></div>
+  <div class="tab-pane" id="profile" role="tabpanel"></div>
+  <div class="tab-pane" id="messages" role="tabpanel"></div>
+  <div class="tab-pane" id="settings" role="tabpanel"></div>
+  <div class="tab-pane" id="settings" role="tabpanel"></div>
+</div>
 
 			<!-- Portfolio item #1 -->
-			<div class="portfolio">
-				<a href="portfolio-item.html" class="portfolio_item">
-					<img src="img/doom.gif" alt=""class="portfolio_img" ></img>
-				</a>
-			<!-- Portfolio item #2 -->	
-			<div class="portfolio">
-				<a href="#" class="portfolio_item">
-					<img src="img/placeholder1.jpg" alt=""class="portfolio_img" ></img>
-				</a>
+<!-- 			<div class="portfolio">
+				<a href="portfolio-item.html" class="portfolio_item" id="doommapper">
+					<img src="img/doom.gif" alt="" class="portfolio_img" ></img>
+				</a> -->
+			<!-- Portfolio item #2	 -->
+<!-- 			<div class="portfolio">
+				<a href="#" class="portfolio_item" id="placeholder1">
+					<img src="img/placeholder1.jpg" alt="" class="portfolio_img" ></img>
+				</a> -->
 			<!-- Portfolio item #3 -->	
-			<div class="portfolio">
+<!-- 			<div class="portfolio">
 				<a href="#" class="portfolio_item">
-					<img src="img/placeholder2.jpg" alt=""class="portfolio_img" ></img>
+					<img src="" alt=""class="portfolio_img" ></img>
 				</a>
-
+ -->
 			</div>
 		</section>
 		
 		<!-- Footer -->
-		<footer id='contact'>
+		<footer id="social">
 			<a href="mailto:shepherd.rowan.k@gmail.com" class="social_link">
 				shepherd.rowan.k@gmail.com </a>
 				<ul class="social_list">
@@ -113,6 +163,11 @@
 			</footer>
 
 			<script src="index.js"></script>
+
+			<!--Bootstrap JS -->
+			 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 	</body>
 </html>
