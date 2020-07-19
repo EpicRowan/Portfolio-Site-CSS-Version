@@ -134,6 +134,11 @@ regular { font-weight: var(--fw-reg) }
 
 /*Header */
 
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
 header {
   display:flex;
   justify-content: space-between;
@@ -213,7 +218,8 @@ header {
   cursor: pointer;
   position: absolute;
   right:1em;
-  top:1em;
+  top:.5em;
+  bottom:1em;
   z-index: 1000;
 }
 
