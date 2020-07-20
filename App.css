@@ -66,7 +66,7 @@ reg { font-weight: var(--fw-reg) }
 
 @media(min-width: 1000px) {
   .coding {
-    display: block;
+      display: block;
 
   }
 }
@@ -180,9 +180,9 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-    background: var(--clr-light);
+  background: var(--clr-light);
   color: var(--clr-dark);
-    font-weight: var(--fw-bold);
+  font-weight: var(--fw-bold);
   font-size: var(--fs-h3);
   border-left: 6px solid #9999ff;
   border-right: 6px solid #9999ff;
@@ -252,7 +252,7 @@ header {
 
 
 
-/* Hamburger */
+/* Hamburger button*/
 
 .hamburger {
   display: block;
@@ -486,13 +486,12 @@ header {
   }
 
 .portfolio_img {
-
-    min-width: 400px;
-    min-height: 400px;
-    transition: 
-    transform 750ms cubic-bezier(.5, 0, .5, 1);
-    opacity:  250ms linear;
-    padding: .25em;
+  min-width: 400px;
+  min-height: 400px;
+  transition: 
+  transform 750ms cubic-bezier(.5, 0, .5, 1);
+  opacity:  250ms linear;
+  padding: .25em;
 }
 
 .portfolio_img:focus {
@@ -524,7 +523,6 @@ header {
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   padding: .5em;
-
 
 }
 
