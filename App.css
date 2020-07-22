@@ -63,6 +63,8 @@ img {
 
 reg { font-weight: var(--fw-reg) }
 
+y { color: yellow; }
+
 
 @media(min-width: 1000px) {
   .coding {
